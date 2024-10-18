@@ -1,0 +1,19 @@
+name: Sync Github to Bitbucket
+description: 'Synchronize from GitHub to Bitbucket via GitHub Actions using Access Token.'
+author: 'quantran-novobi'
+branding:
+  icon: terminal
+  color: yellow
+inputs:
+  bitbucket_repository_name:
+    description: Bitbucket repository name.
+    required: true
+  bitbucket_workspace_name:
+    description: Workspace of Bitbucket repository.
+    required: true
+  bitbucket_access_token:
+    description: Access Token of Bitbucket repository.
+    required: true
+runs:
+  using: 'docker'
+  image: './Dockerfile'
